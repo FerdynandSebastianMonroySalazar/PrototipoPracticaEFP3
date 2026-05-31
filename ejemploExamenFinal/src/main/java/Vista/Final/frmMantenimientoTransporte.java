@@ -13,7 +13,7 @@
 package Vista.Final;
 
 import Controlador.clsUsuarioConectado;
-//import Modelo.PermisosDAO;
+import Modelo.PermisosDAO;
 import javax.swing.table.DefaultTableModel;
 import java.util.List;
 import Controlador.Final.clsTransportistas;
@@ -56,9 +56,9 @@ private DefaultTableModel modeloTransportes;
     }
     public void cargarPermisos() {
         int usuId = clsUsuarioConectado.getUsuId();
-        //PermisosDAO permisosDAO = new PermisosDAO();
+        PermisosDAO permisosDAO = new PermisosDAO();
         int codigoAplicacion = 2000; 
-        //btnBuscar.setEnabled(permisosDAO.puedeBuscar(usuId, codigoAplicacion));
+        btnBuscar.setEnabled(permisosDAO.puedeBuscar(usuId, codigoAplicacion));
     }
 
     /**
