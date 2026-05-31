@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6df3bec7-9d9f-477c-bfbc-b56ad968c5bf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
 	<queryString language="SQL">
 		<![CDATA[SELECT * FROM sig.transportistas;]]>
 	</queryString>
@@ -16,16 +19,47 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch"/>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="23" width="100" height="20" uuid="7701eeaf-f444-45cf-a376-247d6bd24c87"/>
+				<text><![CDATA[Reporte Final]]></text>
+			</staticText>
+		</band>
 	</title>
 	<pageHeader>
 		<band height="35" splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="61" splitType="Stretch"/>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="32" y="2" width="100" height="20" uuid="19288dc4-a6b6-49e3-88c5-243119c1a573"/>
+				<text><![CDATA[Tranid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="2" width="100" height="20" uuid="72016259-366e-4561-954b-fce0e55b2ca8"/>
+				<text><![CDATA[Trantipovehiculo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="437" y="2" width="100" height="20" uuid="8b9e2b76-f6c6-45b5-a1a6-febfc0ebfbb2"/>
+				<text><![CDATA[Empcodigo]]></text>
+			</staticText>
+		</band>
 	</columnHeader>
 	<detail>
-		<band height="125" splitType="Stretch"/>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="32" y="81" width="100" height="20" uuid="6157acc7-41d8-43c5-875d-28298971bcca"/>
+				<textFieldExpression><![CDATA[$F{Tranid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="86" width="100" height="20" uuid="9b1c4038-e307-4ab9-96d6-37c8d495c073"/>
+				<textFieldExpression><![CDATA[$F{Trantipovehiculo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="437" y="86" width="100" height="20" uuid="8283161a-e892-4f76-a224-2ed354882465"/>
+				<textFieldExpression><![CDATA[$F{Empcodigo}]]></textFieldExpression>
+			</textField>
+		</band>
 	</detail>
 	<columnFooter>
 		<band height="45" splitType="Stretch"/>
