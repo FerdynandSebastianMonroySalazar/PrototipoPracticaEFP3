@@ -452,7 +452,7 @@ if (filtro.length() == 0) {
         //ventanaAyuda.setLocationRelativeTo(null);
         //Ferdynand Monroy mayo 2026: agregue la ayuda junto al archivo .chm
         try {
-        String ruta = "C:\\Users\\ferit\\Desktop\\proyFinalP32K26b\\proyectop32k26b\\proyectop32k26b\\src\\main\\java\\Ayudas\\Logistica\\Logistica.chm";
+        String ruta = "C:\\Users\\ferit\\Documents\\ayudaFinal\\ayuda.chm";
 
         File archivo = new File(ruta);
 
